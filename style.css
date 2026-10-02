@@ -1,0 +1,376 @@
+/* -----------------------------
+   CONFIGURACIÓN GENERAL
+------------------------------ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Georgia, serif;
+    background-color: #fff8fb;
+    color: #3d2935;
+    line-height: 1.6;
+}
+
+
+/* -----------------------------
+   MENÚ
+------------------------------ */
+
+header {
+    background-color: #5c4050;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 15px 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.navbar h1 {
+    color: white;
+    font-size: 25px;
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #f5bfd4;
+}
+
+#modoBtn {
+    border: none;
+    padding: 9px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: white;
+    color: #5c4050;
+}
+
+
+/* -----------------------------
+   INICIO
+------------------------------ */
+
+.hero {
+    min-height: 650px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 50px 20px;
+
+    background: linear-gradient(
+        rgba(92, 64, 80, 0.65),
+        rgba(92, 64, 80, 0.65)
+    ),
+    url("https://images.unsplash.com/photo-1512820790803-83ca734da794")
+    center / cover;
+}
+
+.hero-text {
+    max-width: 700px;
+    color: white;
+}
+
+.subtitulo {
+    letter-spacing: 4px;
+    font-size: 14px;
+}
+
+.hero h2 {
+    font-size: 55px;
+    margin: 20px 0;
+}
+
+.hero p {
+    font-size: 19px;
+}
+
+
+/* -----------------------------
+   BOTONES
+------------------------------ */
+
+.boton,
+.leerBtn {
+    display: inline-block;
+
+    margin-top: 20px;
+
+    padding: 12px 22px;
+
+    border: none;
+    border-radius: 25px;
+
+    background-color: #c8799c;
+    color: white;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.boton:hover,
+.leerBtn:hover {
+    background-color: #a85b7c;
+    transform: translateY(-3px);
+}
+
+
+/* -----------------------------
+   SECCIONES
+------------------------------ */
+
+.seccion {
+    max-width: 1100px;
+    margin: auto;
+
+    padding: 80px 25px;
+}
+
+.seccion h2,
+.recomendacion h2 {
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 25px;
+}
+
+.autora-contenido {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+}
+
+.descripcion {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+
+/* -----------------------------
+   LIBROS
+------------------------------ */
+
+.libros-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+.libro {
+    background-color: white;
+
+    padding: 20px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.1);
+
+    transition: 0.3s;
+}
+
+.libro:hover {
+    transform: translateY(-8px);
+}
+
+.portada {
+    height: 220px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(
+        135deg,
+        #d8a6b9,
+        #705365
+    );
+
+    border-radius: 10px;
+
+    margin-bottom: 20px;
+}
+
+.portada span {
+    font-size: 65px;
+}
+
+.libro h3 {
+    font-size: 20px;
+}
+
+.año {
+    color: #a85b7c;
+    font-weight: bold;
+}
+
+.info-oculta {
+    display: none;
+    margin-top: 15px;
+}
+
+
+/* -----------------------------
+   TARJETAS
+------------------------------ */
+
+.tarjetas {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+
+    margin-top: 30px;
+}
+
+.tarjeta {
+    background-color: white;
+
+    padding: 30px;
+
+    text-align: center;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
+}
+
+.tarjeta:hover {
+    transform: scale(1.03);
+}
+
+
+/* -----------------------------
+   RECOMENDACIÓN
+------------------------------ */
+
+.recomendacion {
+    text-align: center;
+
+    padding: 80px 20px;
+
+    background-color: #ead4de;
+}
+
+#resultado {
+    margin-top: 25px;
+
+    font-size: 23px;
+
+    font-weight: bold;
+}
+
+
+/* -----------------------------
+   FOOTER
+------------------------------ */
+
+footer {
+    background-color: #3d2935;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 30px;
+}
+
+
+/* -----------------------------
+   MODO OSCURO
+------------------------------ */
+
+body.modo-oscuro {
+    background-color: #211a20;
+    color: #f5e9ef;
+}
+
+body.modo-oscuro .libro,
+body.modo-oscuro .tarjeta {
+    background-color: #342932;
+}
+
+body.modo-oscuro .recomendacion {
+    background-color: #443541;
+}
+
+
+/* -----------------------------
+   RESPONSIVE
+------------------------------ */
+
+@media (max-width: 900px) {
+
+    .libros-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .menu {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero h2 {
+        font-size: 40px;
+    }
+
+    .libros-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tarjetas {
+        grid-template-columns: 1fr;
+    }
+
+}
