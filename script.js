@@ -73,3 +73,35 @@ recomendarBtn.addEventListener("click", function () {
     resultado.textContent = libros[numero];
 
 });
+
+
+const formulario = document.getElementById("chat-form");
+const entrada = document.getElementById("mensaje-usuario");
+const mensajes = document.getElementById("chat-mensajes");
+
+formulario.addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  const texto = entrada.value.trim();
+
+  if (texto === "") return;
+
+  // Mostrar mensaje del usuario
+  const mensajeUsuario = document.createElement("div");
+  mensajeUsuario.className = "mensaje usuario";
+  mensajeUsuario.textContent = texto;
+
+  mensajes.appendChild(mensajeUsuario);
+
+  entrada.value = "";
+
+  // Respuesta demostrativa
+  const respuestaIA = document.createElement("div");
+  respuestaIA.className = "mensaje ia";
+  respuestaIA.textContent =
+    "¡Gracias por tu consulta! 💗 Esta es una versión de demostración. Próximamente podrás conversar con nuestra inteligencia artificial.";
+
+  mensajes.appendChild(respuestaIA);
+
+  mensajes.scrollTop = mensajes.scrollHeight;
+});
